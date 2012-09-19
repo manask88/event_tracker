@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909220620) do
+ActiveRecord::Schema.define(:version => 20120916215154) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
-    t.time     "start"
-    t.time     "end"
+    t.datetime "start"
+    t.datetime "end"
     t.integer  "location_id"
     t.text     "description"
     t.datetime "created_at",  :null => false
@@ -27,5 +27,7 @@ ActiveRecord::Schema.define(:version => 20120909220620) do
     t.string "name"
     t.text   "description"
   end
+
+  add_index "locations", ["name"], :name => "index_locations_on_name", :unique => true
 
 end

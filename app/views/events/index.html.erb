@@ -17,8 +17,8 @@
   <tr>
 
     <td><%= event.name %></td>
-    <td><%= event.start %></td>
-    <td><%= event.end %></td>
+    <td><%= event.starts %></td>
+    <td><%= event.ends %></td>
     <td><%= Location.find_by_id(event.location_id).name %></td>
     <td><%= event.description %></td>
     <td><%= link_to 'Show', event %></td>

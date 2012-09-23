@@ -27,7 +27,7 @@
     <%= select( :event,:location_id,Location.all.collect {|p| [ p.name, p.id ] }, {:selected => @event.location_id})
     %>
   </div>
-   the location is not in the list.. then create one!
+   If the location is not in the list.. then create one!
     <td><%= link_to 'New Location', new_location_path %></td>
 
   <div class="field">

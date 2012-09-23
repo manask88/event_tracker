@@ -22,7 +22,7 @@ end
 
 class Event < ActiveRecord::Base
   belongs_to :location
-  validates :name, presence: true, length: {maximum: 50}
+  validates :name, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: false}
   validates :location_id, presence: true
   validates_with DateValidator
 end

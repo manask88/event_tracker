@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }
+      format.xml {render xml: @events }
     end
   end
 
@@ -18,6 +19,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }
+      format.xml { render xml: @event }
     end
   end
 
@@ -29,6 +31,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
+      format.xml { render xml: @event }
     end
   end
 

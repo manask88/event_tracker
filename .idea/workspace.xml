@@ -150,8 +150,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="457" />
-    <option name="y" value="62" />
+    <option name="x" value="369" />
+    <option name="y" value="61" />
     <option name="width" value="909" />
     <option name="height" value="596" />
   </component>
@@ -642,7 +642,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="457" y="62" width="909" height="596" extended-state="0" />
+    <frame x="369" y="61" width="909" height="596" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

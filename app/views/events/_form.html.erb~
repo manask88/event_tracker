@@ -1,10 +1,12 @@
 <%= form_for(@event, remote: true) do |f| %>
   
     <div id="error">
-ssss
+
     </div>
  
-
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
   <div class="field">
     <%= f.label :name %><br />
@@ -27,14 +29,12 @@ ssss
     <%= select( :event,:location_id,Location.all.collect {|p| [ p.name, p.id ] }, {:selected => @event.location_id})
     %>
   </div>
-   the location is not in the list.. then create one!
+   If the location is not in the list.. then create one!
     <td><%= link_to 'New Location', new_location_path %></td>
 
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
 <% end %>

@@ -1,37 +1,74 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
+<!---- Website template by freewebsitetemplates.com ---->
 <html>
+
 <head>
-  <title>EventTracker</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+	<title>Our Food - Website Template</title>
+	<meta  charset="iso-8859-1"/>
+
+	  <%= stylesheet_link_tag    "style", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<!--[if IE 6]>
+		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 7]>
+        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
+	<![endif]-->
 </head>
-<body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/">Event Tracker</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-       
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="span9"><%= yield %></div>
-      <div class="span3">
+<body>
     
-      </div>
-    </div>
-  </div>
+	<div id="background">
+	  <div class="page">
+	       <div id="header">
+
+
+
+             <ul class="navigation">
+				 	  	       <span style="font-size: 50px; font-family: Georgia,serif">EVENT TRACKER</span>
+
+				  </ul>
+			  
+				  <ul id="navigation">
+				  <li><%= link_to 'EVENTS', events_path %></li>
+				  <li><%= link_to 'LOCATIONS', locations_path %></li>
+				  </ul>
+		   </div>
+		   <div id="body">
+		   
+		    
+				
+			   
+			    <div class="content">
+				   <div class="body">
+				   
+
+                     <%= yield %>
+				   </div>
+				</div>	
+			   
+		   </div>
+		   
+		   
+		   
+		   
+		   <div id="footer">
+                <ul>
+					<li class="first">
+					     <ul>
+							<li><%= link_to 'Home', events_path %></li>
+
+							<li><a href="mailto:mnakamur@andrew.cmu.edu">Contact Us</a></li>
+						 </ul>
+					</li>
+
+				</ul>		       
+			   
+		   </div>
+		
+	  </div> 
+     </div>	  
+	
 </body>
 </html>

@@ -1,13 +1,13 @@
 <%= form_for(@event, remote: true) do |f| %>
-  
-    
- 
+
+    <div id="error">
+
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
-<div id="error">
 
-    </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

@@ -29,9 +29,12 @@ describe EventsController do
 
   describe "GET 'show'" do
     it "assigns the requested event as @event" do
-      event=Event.first
-      get :show, id: 45
-      assigns(:event).should eq(event)
+      @event=Event.new(name: 'prueba',location_id:1, starts: '2007-09-01 04:03:00 UTC',
+                       ends: '2007-09-01 05:03:00 UTC',  description: 'testdescription')
+      @event.save
+
+      get :show, id: @event.id
+      assigns(:event).should eq(@event)
     end
 
     it "calls find" do

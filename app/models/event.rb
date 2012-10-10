@@ -24,5 +24,17 @@ class Event < ActiveRecord::Base
   belongs_to :location
   validates :name, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: false}
   validates :location_id, presence: true
-  validates_with DateValidator
+  validates :starts, presence: true
+  validates :ends, presence: true
+
+
+  validates_with DateValidator,  :if => (:dates?)
 end
+     public
+
+  def dates?
+    self.starts? and self.ends?
+  end
+
+
+
